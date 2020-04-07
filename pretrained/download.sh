@@ -35,6 +35,7 @@ download_() {
 }
 
 download_ "1vO_vALz8HXifZaEgtLBvtEq869AKf6kc" "$outputPath" "kinetics_tsn_flow.pth.tar"
+download_ "1c2z0xrshfpLvhcbkIpNJVcdyPe5rEO-g" "$outputPath" "epic_tbn_rgbflowaudio.pth.tar"
 
 echo -e "\n### ------------------------------------------------------- ###\n"
 echo "### All Done"
