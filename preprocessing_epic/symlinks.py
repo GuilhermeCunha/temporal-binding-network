@@ -5,11 +5,14 @@ import argparse
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('data_dir', type=Path, help='Directory of epic dataset')
-    parser.add_argument('symlinks_dir', type=Path, help='Directory to save symlinks for EPIC')
+    parser.add_argument('data_dir', type=Path,
+                        help='Directory of epic dataset')
+    parser.add_argument('symlinks_dir', type=Path,
+                        help='Directory to save symlinks for EPIC')
 
     args = parser.parse_args()
-
+    print(f"data_dir: {str(args.data_dir)}")
+    print(f"symlinks_dir: {str(args.symlinks_dir)}")
     if not args.symlinks_dir.exists():
         args.symlinks_dir.mkdir(parents=True)
 
@@ -19,8 +22,11 @@ if __name__ == '__main__':
         else:
             pattern = 'P[0-3][0-9]/P[0-3][0-9]_[0-9][0-9]/*/'
         for split in ['train', 'test']:
+            print(f"Starting : [{modality}/{split}]")
             modality_split_dir = args.data_dir / modality / split
-            for source_file in modality_split_dir.glob(pattern):
+            source_files = modality_split_dir.glob(pattern)
+            print(f"Source files: {str(len(list(source_files)))}")
+            for source_file in source_files:
                 if modality == 'rgb':
                     person, video = str(source_file).split('/')[-2:]
                 else:
