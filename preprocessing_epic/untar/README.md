@@ -6,7 +6,7 @@
 
 ## Folders Structure
 ### Before extracting
-`
+```
 ├── EPIC_KITCHENS_2018
 |   |─── frames_rgb_flow
 |   |   ├─── flow
@@ -39,9 +39,9 @@
 |   |   |   |   ├─── P02
 |   |   |   |   |   ├─── P02_01.tar
 |   |   |   |   |   ├─── P02_02.tar
-`
+```
 ### After extracting
-`
+```
 ├── EPIC_KITCHENS_2018
 |   |─── frames_rgb_flow
 |   |   ├─── flow
@@ -118,4 +118,4 @@
 |   |   |   |   |   ├─── frame_0000000001.jpg
 |   |   |   |   |   ├─── frame_0000000002.jpg
 |   |   |   |   |   ├─── ...
-`
+```
