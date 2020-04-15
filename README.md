@@ -32,7 +32,7 @@ When using this code, kindly reference:
 ### Visual data
 
 This step assumes that you've downloaded the RGB and Flow frames of EPIC dataset using [this script](https://github.com/epic-kitchens/download-scripts/blob/master/download_frames_rgb_flow.sh)
-(OBS: You can extract all the .tar files downloaded by the scripts using [this script](https://github.com/ekazakos/temporal-binding-network/tree/master/preprocessing_epic/untar/)), and your copy of the dataset has the same folder structure 
+(OBS: You need extract and organize all the .tar files downloaded by the scripts using [this script](https://github.com/ekazakos/temporal-binding-network/tree/master/preprocessing_epic/untar/)), and your copy of the dataset has the same folder structure 
 provided in the script (which can be found [here](https://data.bris.ac.uk/data/dataset/3h91syskeag572hl6tvuovwv4d)). Also you should untar each video's frames in its corresponding folder. 
 
 `dataset.py` uses a unified folder structure for all datasets, which is the same as the one used in the [TSN code](https://github.com/yjxiong/tsn-pytorch). Example of the folder structure for RGB and Flow:
