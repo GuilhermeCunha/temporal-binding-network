@@ -22,10 +22,9 @@ if __name__ == '__main__':
         else:
             pattern = 'P[0-3][0-9]/P[0-3][0-9]_[0-9][0-9]/*/'
         for split in ['train', 'test']:
-            print(f"Starting : [{modality}/{split}]")
+            print(f"### Starting : [{modality}/{split}]")
             modality_split_dir = args.data_dir / modality / split
             source_files = modality_split_dir.glob(pattern)
-            print(f"Source files: {str(len(list(source_files)))}")
             for source_file in source_files:
                 if modality == 'rgb':
                     person, video = str(source_file).split('/')[-2:]
